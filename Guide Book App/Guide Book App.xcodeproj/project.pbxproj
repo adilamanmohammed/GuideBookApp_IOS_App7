@@ -16,6 +16,9 @@
 		A58201D62C1FA5F30008A825 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58201D52C1FA5F30008A825 /* DataService.swift */; };
 		A58201D82C1FA6A00008A825 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58201D72C1FA6A00008A825 /* City.swift */; };
 		A58201DA2C1FA7840008A825 /* Attraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58201D92C1FA7840008A825 /* Attraction.swift */; };
+		A58201DC2C23220B0008A825 /* CityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58201DB2C23220B0008A825 /* CityCard.swift */; };
+		A58201DE2C2354FA0008A825 /* AttractionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58201DD2C2354FA0008A825 /* AttractionRow.swift */; };
+		A5F446E62C325968002E914A /* DemoData.json in Resources */ = {isa = PBXBuildFile; fileRef = A5F446E52C325968002E914A /* DemoData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,9 @@
 		A58201D52C1FA5F30008A825 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		A58201D72C1FA6A00008A825 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		A58201D92C1FA7840008A825 /* Attraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attraction.swift; sourceTree = "<group>"; };
+		A58201DB2C23220B0008A825 /* CityCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCard.swift; sourceTree = "<group>"; };
+		A58201DD2C2354FA0008A825 /* AttractionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionRow.swift; sourceTree = "<group>"; };
+		A5F446E52C325968002E914A /* DemoData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DemoData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,10 +71,13 @@
 				A58201C52C1FA0BF0008A825 /* CityView.swift */,
 				A58201D12C1FA5310008A825 /* AttractionView.swift */,
 				A58201D32C1FA54F0008A825 /* DetailView.swift */,
+				A58201DB2C23220B0008A825 /* CityCard.swift */,
 				A58201D52C1FA5F30008A825 /* DataService.swift */,
 				A58201D72C1FA6A00008A825 /* City.swift */,
 				A58201D92C1FA7840008A825 /* Attraction.swift */,
+				A58201DD2C2354FA0008A825 /* AttractionRow.swift */,
 				A58201C72C1FA0C10008A825 /* Assets.xcassets */,
+				A5F446E52C325968002E914A /* DemoData.json */,
 				A58201C92C1FA0C10008A825 /* Preview Content */,
 			);
 			path = "Guide Book App";
@@ -141,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A58201CB2C1FA0C10008A825 /* Preview Assets.xcassets in Resources */,
+				A5F446E62C325968002E914A /* DemoData.json in Resources */,
 				A58201C82C1FA0C10008A825 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -154,8 +164,10 @@
 			files = (
 				A58201C62C1FA0BF0008A825 /* CityView.swift in Sources */,
 				A58201D42C1FA54F0008A825 /* DetailView.swift in Sources */,
+				A58201DE2C2354FA0008A825 /* AttractionRow.swift in Sources */,
 				A58201D82C1FA6A00008A825 /* City.swift in Sources */,
 				A58201DA2C1FA7840008A825 /* Attraction.swift in Sources */,
+				A58201DC2C23220B0008A825 /* CityCard.swift in Sources */,
 				A58201C42C1FA0BF0008A825 /* Guide_Book_AppApp.swift in Sources */,
 				A58201D22C1FA5310008A825 /* AttractionView.swift in Sources */,
 				A58201D62C1FA5F30008A825 /* DataService.swift in Sources */,

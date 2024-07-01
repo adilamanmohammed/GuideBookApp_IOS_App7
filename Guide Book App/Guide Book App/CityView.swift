@@ -15,7 +15,7 @@ struct CityView: View {
     var body: some View {
         NavigationStack{
             
-            ScrollView{
+            ScrollView(showsIndicators: false){
                 
                 VStack {
                     ForEach(cities) { city in
@@ -23,17 +23,19 @@ struct CityView: View {
                         NavigationLink {
                             AttractionView(city: city)
                         } label: {
-                            /*@START_MENU_TOKEN@*/Text(city.name)/*@END_MENU_TOKEN@*/
+                            CityCard(city: city)
                         }
                         
                     }
                 }
             }
-            .padding()
+            .padding(.horizontal)
         }
+        .ignoresSafeArea()
         .onAppear{
-            cities = dataService.getData()
+            cities = dataService.getFileData()
         }
+        
     }
 }
 

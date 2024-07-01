@@ -12,14 +12,74 @@ struct DetailView: View {
     var attraction : Attraction
     
     var body: some View {
-        ScrollView{
+        
+        VStack(spacing: 20){
             Image(attraction.imageName)
                 .resizable()
-                .aspectRatio(contentMode: .fit)
-            Text(attraction.name)
-            Text(attraction.longDescription)
+                .aspectRatio(contentMode: .fill)
+                .frame(height: 300)
             
+            ScrollView{
+                
+                VStack(alignment: .leading, spacing: 20){
+                    Text(attraction.name)
+                        .font(.title)
+                        .bold()
+                    
+                    Text(attraction.longDescription)
+                        .multilineTextAlignment(.leading)
+                    
+                    // The following is true show button
+                    
+                    if let url = URL(string: "maps://?q=\(cleanName(name: attraction.name))=\(cleancoors(latlong: attraction.latLong))&z=10&t=s")
+                    {
+                        // Test if URL can be opened
+                        if UIApplication.shared.canOpenURL(url)
+                        {
+                            // Open the URL
+                            Button {
+                                // Create URL instance based on URL Scheme
+                                
+                                UIApplication.shared.open(url)
+                               
+                                
+                                
+                            } label: {
+                                ZStack{
+                                    RoundedRectangle(cornerRadius: 15)
+                                        .foregroundColor(.blue)
+                                        .frame(height: 40)
+                                    
+                                    Text("Get Directions")
+                                        .foregroundColor(.white)
+                                
+                                }
+                            }
+                            
+                        }
+                        
+                        
+                    }
+                    
+                    
+
+                }
+                .padding(.bottom, 20)
+                
+            }
+            .padding(.horizontal)
         }
+        .ignoresSafeArea()
+        
+        
+    }
+    
+    func cleanName(name: String) -> String {
+        return name.replacingOccurrences(of: " ", with: "+").folding(options: .diacriticInsensitive, locale: .current)
+    }
+    
+    func cleancoors(latlong: String) -> String {
+        return latlong.replacingOccurrences(of: " ", with: "")
     }
 }
 
