@@ -30,6 +30,7 @@ struct AttractionView: View {
             }
         }
         .padding(.horizontal)
+        .padding(.top, 20)
     }
 }
 
